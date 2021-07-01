@@ -7,7 +7,7 @@
 
 <h1>A Web Page</h1>
 <input id="url" value="">
-<button type="button" onclick="CallWebAPI()">Try it</button>
+<button type="button" onclick="MyFunction()">Try it</button>
 <p id="demo"></p>
     <h1> TEST </h1>
 <p id="demo1"></p>
@@ -23,22 +23,9 @@
     "The full URL of this page is:<br>" + window.location.href ;
     document.getElementById("demo1").innerHTML = 
     "The full URL of this page is:<br>" + id_token[0] ;
-    function CallWebAPI() {
-    var type = window.location.hash.substr(1);
-    var type3 = type.split("=");
-    var id_token = type3[1].split("&");
-    // New XMLHTTPRequest
-    var request = new XMLHttpRequest();
-    request.open("POST", "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value, false);
-    request.setRequestHeader("Authorization", id_token);  
-    request.send();
-    // view request status
-    alert(request.status);
-    response.innerHTML = request.responseText;
-    }
-    //function myFunction() {
-                  // window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
-                //};
+    function myFunction() {
+                   window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
+                };
 </script>
 </body>
 </html>
