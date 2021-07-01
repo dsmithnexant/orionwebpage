@@ -11,8 +11,10 @@
 <p id="demo"></p>
     
 <script>
+     var user = gapi.auth2.getAuthInstance().currentUser.get();
+     var idToken = user.getAuthResponse().id_token;
     document.getElementById("demo").innerHTML = 
-    "The full URL of this page is:<br>" + window.location.href;
+    "The full URL of this page is:<br>" + idToken;
     function myFunction() {
                     window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
                 };
