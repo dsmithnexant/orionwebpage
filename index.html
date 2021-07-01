@@ -15,12 +15,12 @@
 <script>
 
     var type = window.location.hash.substr(1);
-    var type= type.split("=").split("&")
+    var type2 = type.split("=").split("&")
   
     document.getElementById("demo").innerHTML = 
     "The full URL of this page is:<br>" + window.location.href ;
     document.getElementById("demo1").innerHTML = 
-    "The full URL of this page is:<br>" + type ;
+    "The full URL of this page is:<br>" + type2 ;
     function myFunction() {
                     window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
                 };
