@@ -11,7 +11,7 @@
 <p id="demo"></p>
     
 <script>
-    var url = window.location;
+    var url = window.location.href;
     var access_token = new URLSearchParams(url.search).get('id_token');
     
     document.getElementById("demo").innerHTML = 
