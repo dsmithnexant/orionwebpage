@@ -2,9 +2,8 @@
 <html>
 <head>
 <script>
-    var url = window.location;
-    var xyz = new URLSearchParams(url.search).get('id_token');
-    document.getElementById("myText").value = url;
+    document.getElementById("demo").innerHTML = 
+    "The full URL of this page is:<br>" + window.location.href;
     function myFunction() {
                     window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
                 };
@@ -15,7 +14,7 @@
 <h1>A Web Page</h1>
 <input id="url" value="">
 <button type="button" onclick="myFunction()">Try it</button>
-<h1>"The value for number is: " <span id="myText"></span></h1>
+<p id="demo"></p>
 </body>
 </html>
 
