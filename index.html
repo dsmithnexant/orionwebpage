@@ -5,7 +5,7 @@
     function myFunction() {
                     window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
                 };
-    var xyz = jQuery.url.param("id_token");
+    var xyz = jQuery.url().param("id_token");
     document.getElementById("myText").innerHTML = xyz;
 
 </script>
