@@ -9,16 +9,18 @@
 <input id="url" value="">
 <button type="button" onclick="myFunction()">Try it</button>
 <p id="demo"></p>
+    <h1> TEST </h1>
 <p id="demo2"></p>
     
 <script>
     var url = new URL(window.location.href);
     var c = url.searchParams.get("id_token");
+    var type = window.location.hash.substr(1);
     console.log(c);
     document.getElementById("demo").innerHTML = 
     "The full URL of this page is:<br>" + window.location.href ;
     document.getElementById("demo1").innerHTML = 
-    "The full URL of this page is:<br>" + c ;
+    "The full URL of this page is:<br>" + type ;
     function myFunction() {
                     window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
                 };
