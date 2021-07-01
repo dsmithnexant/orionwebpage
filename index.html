@@ -11,8 +11,11 @@
 <p id="demo"></p>
     
 <script>
+    var url = new URL(window.location.href);
+    var c = url.searchParams.get("id_token");
+    console.log(c);
     document.getElementById("demo").innerHTML = 
-    "The full URL of this page is:<br>" + window.location.href;
+    "The full URL of this page is:<br>" + c;
     function myFunction() {
                     window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
                 };
