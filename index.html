@@ -5,6 +5,9 @@
     function myFunction() {
                     window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
                 };
+    function () {
+                var urlPart = document.location.pathname.split('id_token/')[1].split('/')[0];
+                return urlPart; }
 </script>
 </head>
 <body>
