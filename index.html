@@ -24,21 +24,7 @@
     document.getElementById("demo1").innerHTML = 
     "The full URL of this page is:<br>" + id_token[0] ;
     function myFunction() {
-        
-        var req = new XMLHttpRequest();
-        req.open('GET', "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value, true); //true means request will be async
-        req.onreadystatechange = function (aEvt) {
-          if (req.readyState == 4) {
-             if(req.status == 200)
-              //update your page here
-              //req.responseText - is your result html or whatever you send as a response
-             else
-              alert("Error loading page\n");
-          }
-        };
-        req.setRequestHeader('Authorization', 'id_token');
-        req.send();
-                    //window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
+                   window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
                 };
 </script>
 </body>
