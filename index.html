@@ -2,7 +2,8 @@
 <html>
 <head>
 <script>
-    var xyz = new URLSearchParams(window.location.hash).get('id_token');
+    var url = window.location;
+    var xyz = new URLSearchParams(url.search).get('id_token');
     document.getElementById("myText").value = xyz;
     function myFunction() {
                     window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
