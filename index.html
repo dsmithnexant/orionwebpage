@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
-    document.getElementById("demo").innerHTML = 
-    "The full URL of this page is:<br>" + window.location.href;
-    function myFunction() {
-                    window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
-                };
-</script>
+
 </head>
 <body>
 
@@ -15,6 +9,14 @@
 <input id="url" value="">
 <button type="button" onclick="myFunction()">Try it</button>
 <p id="demo"></p>
+    
+<script>
+    document.getElementById("demo").innerHTML = 
+    "The full URL of this page is:<br>" + window.location.href;
+    function myFunction() {
+                    window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
+                };
+</script>
 </body>
 </html>
 
