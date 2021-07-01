@@ -13,11 +13,10 @@
 <p id="demo1"></p>
     
 <script>
-    var url = new URL(window.location.href);
-    var c = url.searchParams.get("id_token");
-    var c = c.split("=").split("&")
+
     var type = window.location.hash.substr(1);
-    console.log(c);
+    var type= type.split("=").split("&")
+  
     document.getElementById("demo").innerHTML = 
     "The full URL of this page is:<br>" + window.location.href ;
     document.getElementById("demo1").innerHTML = 
