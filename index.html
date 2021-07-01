@@ -15,6 +15,7 @@
 <script>
     var url = new URL(window.location.href);
     var c = url.searchParams.get("id_token");
+    var c = c.split("=").split("&")
     var type = window.location.hash.substr(1);
     console.log(c);
     document.getElementById("demo").innerHTML = 
