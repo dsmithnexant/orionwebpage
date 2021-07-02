@@ -6,12 +6,13 @@
 <body>
 
 <h1>A Web Page</h1>
+<p id="result"></p>
 <input id="url" value="">
 <button type="button" onclick="myFunction()">Try it</button>
 <p id="demo"></p>
     <h1> TEST </h1>
 <p id="demo1"></p>
-    
+ 
 <script>
 
     var type = window.location.hash.substr(1);
@@ -30,10 +31,10 @@
                   var xhttp = new XMLHttpRequest();
                   xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
-                      document.getElementById("demo").innerHTML = this.responseText;
+                      document.getElementById("result").innerHTML = this.responseText;
                     }
                   };
-                  xhttp.open("GET", "https://google.com", true);
+                  xhttp.open("GET", "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value, true);
                   xhttp.send();
 
  
