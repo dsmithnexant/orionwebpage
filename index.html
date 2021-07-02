@@ -28,8 +28,24 @@
     
     
     function myFunction() {
-               window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
-               };
+               
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+
+        xhr.addEventListener("readystatechange", function() {
+          if(this.readyState === 4) {
+            console.log(this.responseText);
+          }
+        });
+
+        xhr.open("POST", "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project=11212");
+        xhr.setRequestHeader("Authorization", access_token1[1]);
+
+        xhr.send();
+        
+        
+              // window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
+        };
 </script>
 </body>
 </html>
