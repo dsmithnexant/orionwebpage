@@ -24,12 +24,21 @@
     "The full URL of this page is:<br>" + window.location.href ;
     document.getElementById("demo1").innerHTML = 
     "The full URL of this page is:<br>" + access_token1[1] ;
+    
+    
     function myFunction() {
-                 $.ajax({
-                   url : "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value,
-                   headers: {
-                        'Authorization' : access_token1[1]
-                   });
+                <script>
+
+                  var xhttp = new XMLHttpRequest();
+                  xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                      document.getElementById("demo").innerHTML = this.responseText;
+                    }
+                  };
+                  xhttp.open("GET", "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value, true);
+                  xhttp.send();
+
+ 
                 // window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
                };
 </script>
