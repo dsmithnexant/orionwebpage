@@ -15,14 +15,14 @@
 <script>
 
     var type = window.location.hash.substr(1);
-    var type3 = type.split("=");
+    var type3 = type.split("&");
     var id_token = type3[1].split("&");
 
   
     document.getElementById("demo").innerHTML = 
     "The full URL of this page is:<br>" + window.location.href ;
     document.getElementById("demo1").innerHTML = 
-    "The full URL of this page is:<br>" + id_token[0] ;
+    "The full URL of this page is:<br>" + type3[1] ;
     function myFunction() {
                  window.location.href = "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project="+document.getElementById("url").value
                 };
