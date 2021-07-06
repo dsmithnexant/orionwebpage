@@ -12,7 +12,9 @@
 <p id="demo"></p>
     <h1> TEST </h1>
 <p id="demo1"></p>
- 
+<h1> Response </h1>
+<p id="responseobject"></p>
+    
 <script>
 
     var type = window.location.hash.substr(1);
@@ -34,6 +36,7 @@
 
         xhr.addEventListener("readystatechange", function() {
           if(this.readyState === 4) {
+            document.getElementById("responseobject").innerHTML = this.responseText;
             console.log(this.responseText);
           }
         });
