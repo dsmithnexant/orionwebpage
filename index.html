@@ -35,9 +35,9 @@
         xhr.withCredentials = false;
 
         xhr.addEventListener("readystatechange", function() {
-          if(this.readyState === 4) {
-            document.getElementById('responseobject').innerHTML = this.responseText;
+          if(this.readyState === 4) {   
             console.log(this.responseText);
+            document.getElementById('responseobject').innerHTML = this.responseText;
           }
         });
 
