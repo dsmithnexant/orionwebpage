@@ -40,8 +40,10 @@
             document.getElementById('responseobject').innerHTML = this.responseText;
           }
         });
-
-        xhr.open("GET", "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project=11212");
+        
+        // Assign user input query string in url 
+        var user_input = document.getElementById("url").value;
+        xhr.open("GET", "https://hmseb5az9d.execute-api.us-west-2.amazonaws.com/06/devReturnModels?project=" + user_input);
         xhr.setRequestHeader("Authorization", access_token1[1]);
 
         xhr.send();
