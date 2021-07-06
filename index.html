@@ -36,7 +36,7 @@
 
         xhr.addEventListener("readystatechange", function() {
           if(this.readyState === 4) {
-            document.getElementById('responseobject').innerHTML = this.responsetext;
+            document.getElementById('responseobject').innerHTML = this.responseText;
             console.log(this.responseText);
           }
         });
